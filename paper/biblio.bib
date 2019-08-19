@@ -1,0 +1,606 @@
+%%% ====================================================================
+%%%  BibTeX-file{
+%%%     author          = "Gerry Murray",
+%%%     version         = "1.2",
+%%%     date            = "2 April 2012",
+%%%     filename        = "acmsmall-sample-bibfile.bib",
+%%%     address         = "ACM, NY",
+%%%     email           = "murray at hq.acm.org",
+%%%     codetable       = "ISO/ASCII",
+%%%     keywords        = "ACM Reference Format, bibliography, citation, references",
+%%%     supported       = "yes",
+%%%     docstring       = "This BibTeX database file contains 'bibdata' entries
+%%%                        that 'match' the examples provided in the Specifications Document
+%%%                        AND, also, 'legacy'-type bibs. It should assist authors in
+%%%                        choosing the 'correct' at-bibtype and necessary bib-fields
+%%%                        so as to obtain the appropriate ACM Reference Format output.
+%%%                        It also contains many 'Standard Abbreviations'. "
+%%%  }
+%%% ====================================================================
+
+% Journals
+
+% First the Full Name is given, then the abbreviation used in the AMS Math
+% Reviews, with an indication if it could not be found there.
+% Note the 2nd overwrites the 1st, so swap them if you want the full name.
+
+ %{AMS}
+ @String{AMSTrans = "American Mathematical Society Translations" }
+ @String{AMSTrans = "Amer. Math. Soc. Transl." }
+ @String{BullAMS = "Bulletin of the American Mathematical Society" }
+ @String{BullAMS = "Bull. Amer. Math. Soc." }
+ @String{ProcAMS = "Proceedings of the American Mathematical Society" }
+ @String{ProcAMS = "Proc. Amer. Math. Soc." }
+ @String{TransAMS = "Transactions of the American Mathematical Society" }
+ @String{TransAMS = "Trans. Amer. Math. Soc." }
+
+ %ACM
+ @String{CACM = "Communications of the {ACM}" }
+ @String{CACM = "Commun. {ACM}" }
+ @String{CompServ = "Comput. Surveys" }
+ @String{JACM = "J. ACM" }
+ @String{ACMMathSoft = "{ACM} Transactions on Mathematical Software" }
+ @String{ACMMathSoft = "{ACM} Trans. Math. Software" }
+ @String{SIGNUM = "{ACM} {SIGNUM} Newsletter" }
+ @String{SIGNUM = "{ACM} {SIGNUM} Newslett." }
+
+ @String{AmerSocio = "American Journal of Sociology" }
+ @String{AmerStatAssoc = "Journal of the American Statistical Association" }
+ @String{AmerStatAssoc = "J. Amer. Statist. Assoc." }
+ @String{ApplMathComp = "Applied Mathematics and Computation" }
+ @String{ApplMathComp = "Appl. Math. Comput." }
+ @String{AmerMathMonthly = "American Mathematical Monthly" }
+ @String{AmerMathMonthly = "Amer. Math. Monthly" }
+ @String{BIT = "{BIT}" }
+ @String{BritStatPsych = "British Journal of Mathematical and Statistical
+          Psychology" }
+ @String{BritStatPsych = "Brit. J. Math. Statist. Psych." }
+ @String{CanMathBull = "Canadian Mathematical Bulletin" }
+ @String{CanMathBull = "Canad. Math. Bull." }
+ @String{CompApplMath = "Journal of Computational and Applied Mathematics" }
+ @String{CompApplMath = "J. Comput. Appl. Math." }
+ @String{CompPhys = "Journal of Computational Physics" }
+ @String{CompPhys = "J. Comput. Phys." }
+ @String{CompStruct = "Computers and Structures" }
+ @String{CompStruct = "Comput. \& Structures" }
+ @String{CompJour = "The Computer Journal" }
+ @String{CompJour = "Comput. J." }
+ @String{CompSysSci = "Journal of Computer and System Sciences" }
+ @String{CompSysSci = "J. Comput. System Sci." }
+ @String{Computing = "Computing" }
+ @String{ContempMath = "Contemporary Mathematics" }
+ @String{ContempMath = "Contemp. Math." }
+ @String{Crelle = "Crelle's Journal" }
+ @String{GiornaleMath = "Giornale di Mathematiche" }
+ @String{GiornaleMath = "Giorn. Mat." } % didn't find in AMS MR., ibid.
+
+ %IEEE
+ @String{Computer = "{IEEE} Computer" }
+ @String{IEEETransComp = "{IEEE} Transactions on Computers" }
+ @String{IEEETransComp = "{IEEE} Trans. Comput." }
+ @String{IEEETransAC = "{IEEE} Transactions on Automatic Control" }
+ @String{IEEETransAC = "{IEEE} Trans. Automat. Control" }
+ @String{IEEESpec = "{IEEE} Spectrum" } % didn't find in AMS MR
+ @String{ProcIEEE = "Proceedings of the {IEEE}" }
+ @String{ProcIEEE = "Proc. {IEEE}" } % didn't find in AMS MR
+ @String{IEEETransAeroElec = "{IEEE} Transactions on Aerospace and Electronic
+     Systems" }
+ @String{IEEETransAeroElec = "{IEEE} Trans. Aerospace Electron. Systems" }
+
+ @String{IMANumerAna = "{IMA} Journal of Numerical Analysis" }
+ @String{IMANumerAna = "{IMA} J. Numer. Anal." }
+ @String{InfProcLet = "Information Processing Letters" }
+ @String{InfProcLet = "Inform. Process. Lett." }
+ @String{InstMathApp = "Journal of the Institute of Mathematics and
+     its Applications" }
+ @String{InstMathApp = "J. Inst. Math. Appl." }
+ @String{IntControl = "International Journal of Control" }
+ @String{IntControl = "Internat. J. Control" }
+ @String{IntNumerEng = "International Journal for Numerical Methods in
+     Engineering" }
+ @String{IntNumerEng = "Internat. J. Numer. Methods Engrg." }
+ @String{IntSuper = "International Journal of Supercomputing Applications" }
+ @String{IntSuper = "Internat. J. Supercomputing Applic." } % didn't find
+%% in AMS MR
+ @String{Kibernetika = "Kibernetika" }
+ @String{JResNatBurStand = "Journal of Research of the National Bureau
+     of Standards" }
+ @String{JResNatBurStand = "J. Res. Nat. Bur. Standards" }
+ @String{LinAlgApp = "Linear Algebra and its Applications" }
+ @String{LinAlgApp = "Linear Algebra Appl." }
+ @String{MathAnaAppl = "Journal of Mathematical Analysis and Applications" }
+ @String{MathAnaAppl = "J. Math. Anal. Appl." }
+ @String{MathAnnalen = "Mathematische Annalen" }
+ @String{MathAnnalen = "Math. Ann." }
+ @String{MathPhys = "Journal of Mathematical Physics" }
+ @String{MathPhys = "J. Math. Phys." }
+ @String{MathComp = "Mathematics of Computation" }
+ @String{MathComp = "Math. Comp." }
+ @String{MathScand = "Mathematica Scandinavica" }
+ @String{MathScand = "Math. Scand." }
+ @String{TablesAidsComp = "Mathematical Tables and Other Aids to Computation" }
+ @String{TablesAidsComp = "Math. Tables Aids Comput." }
+ @String{NumerMath = "Numerische Mathematik" }
+ @String{NumerMath = "Numer. Math." }
+ @String{PacificMath = "Pacific Journal of Mathematics" }
+ @String{PacificMath = "Pacific J. Math." }
+ @String{ParDistComp = "Journal of Parallel and Distributed Computing" }
+ @String{ParDistComp = "J. Parallel and Distrib. Comput." } % didn't find
+%% in AMS MR
+ @String{ParComputing = "Parallel Computing" }
+ @String{ParComputing = "Parallel Comput." }
+ @String{PhilMag = "Philosophical Magazine" }
+ @String{PhilMag = "Philos. Mag." }
+ @String{ProcNAS = "Proceedings of the National Academy of Sciences
+                    of the USA" }
+ @String{ProcNAS = "Proc. Nat. Acad. Sci. U. S. A." }
+ @String{Psychometrika = "Psychometrika" }
+ @String{QuartMath = "Quarterly Journal of Mathematics, Oxford, Series (2)" }
+ @String{QuartMath = "Quart. J. Math. Oxford Ser. (2)" }
+ @String{QuartApplMath = "Quarterly of Applied Mathematics" }
+ @String{QuartApplMath = "Quart. Appl. Math." }
+ @String{RevueInstStat = "Review of the International Statisical Institute" }
+ @String{RevueInstStat = "Rev. Inst. Internat. Statist." }
+
+ %SIAM
+ @String{JSIAM = "Journal of the Society for Industrial and Applied
+     Mathematics" }
+ @String{JSIAM = "J. Soc. Indust. Appl. Math." }
+ @String{JSIAMB = "Journal of the Society for Industrial and Applied
+     Mathematics, Series B, Numerical Analysis" }
+ @String{JSIAMB = "J. Soc. Indust. Appl. Math. Ser. B Numer. Anal." }
+ @String{SIAMAlgMeth = "{SIAM} Journal on Algebraic and Discrete Methods" }
+ @String{SIAMAlgMeth = "{SIAM} J. Algebraic Discrete Methods" }
+ @String{SIAMAppMath = "{SIAM} Journal on Applied Mathematics" }
+ @String{SIAMAppMath = "{SIAM} J. Appl. Math." }
+ @String{SIAMComp = "{SIAM} Journal on Computing" }
+ @String{SIAMComp = "{SIAM} J. Comput." }
+ @String{SIAMMatrix = "{SIAM} Journal on Matrix Analysis and Applications" }
+ @String{SIAMMatrix = "{SIAM} J. Matrix Anal. Appl." }
+ @String{SIAMNumAnal = "{SIAM} Journal on Numerical Analysis" }
+ @String{SIAMNumAnal = "{SIAM} J. Numer. Anal." }
+ @String{SIAMReview = "{SIAM} Review" }
+ @String{SIAMReview = "{SIAM} Rev." }
+ @String{SIAMSciStat = "{SIAM} Journal on Scientific and Statistical
+     Computing" }
+ @String{SIAMSciStat = "{SIAM} J. Sci. Statist. Comput." }
+
+ @String{SoftPracExp = "Software Practice and Experience" }
+ @String{SoftPracExp = "Software Prac. Experience" } % didn't find in AMS MR
+ @String{StatScience = "Statistical Science" }
+ @String{StatScience = "Statist. Sci." }
+ @String{Techno = "Technometrics" }
+ @String{USSRCompMathPhys = "{USSR} Computational Mathematics and Mathematical
+     Physics" }
+ @String{USSRCompMathPhys = "{U. S. S. R.} Comput. Math. and Math. Phys." }
+ @String{VLSICompSys = "Journal of {VLSI} and Computer Systems" }
+ @String{VLSICompSys = "J. {VLSI} Comput. Syst." }
+ @String{ZAngewMathMech = "Zeitschrift fur Angewandte Mathematik und
+     Mechanik" }
+ @String{ZAngewMathMech = "Z. Angew. Math. Mech." }
+ @String{ZAngewMathPhys = "Zeitschrift fur Angewandte Mathematik und Physik" }
+ @String{ZAngewMathPhys = "Z. Angew. Math. Phys." }
+
+% Publishers % ================================================= |
+
+ @String{Academic = "Academic Press" }
+ @String{ACMPress = "{ACM} Press" }
+ @String{AdamHilger = "Adam Hilger" }
+ @String{AddisonWesley = "Addison-Wesley" }
+ @String{AllynBacon = "Allyn and Bacon" }
+ @String{AMS = "American Mathematical Society" }
+ @String{Birkhauser = "Birkha{\"u}ser" }
+ @String{CambridgePress = "Cambridge University Press" }
+ @String{Chelsea = "Chelsea" }
+ @String{ClaredonPress = "Claredon Press" }
+ @String{DoverPub = "Dover Publications" }
+ @String{Eyolles = "Eyolles" }
+ @String{HoltRinehartWinston = "Holt, Rinehart and Winston" }
+ @String{Interscience = "Interscience" }
+ @String{JohnsHopkinsPress = "The Johns Hopkins University Press" }
+ @String{JohnWileySons = "John Wiley and Sons" }
+ @String{Macmillan = "Macmillan" }
+ @String{MathWorks = "The Math Works Inc." }
+ @String{McGrawHill = "McGraw-Hill" }
+ @String{NatBurStd = "National Bureau of Standards" }
+ @String{NorthHolland = "North-Holland" }
+ @String{OxfordPress = "Oxford University Press" }  %address Oxford or London?
+ @String{PergamonPress = "Pergamon Press" }
+ @String{PlenumPress = "Plenum Press" }
+ @String{PrenticeHall = "Prentice-Hall" }
+ @String{SIAMPub = "{SIAM} Publications" }
+ @String{Springer = "Springer-Verlag" }
+ @String{TexasPress = "University of Texas Press" }
+ @String{VanNostrand = "Van Nostrand" }
+ @String{WHFreeman = "W. H. Freeman and Co." }
+
+%Entries
+
+@inproceedings{gligoric2018constraints,
+  title={How Constraints Affect Content: The Case of Twitter's Switch from 140 to 280 Characters},
+  author={Gligori{\'c}, Kristina and Anderson, Ashton and West, Robert},
+  booktitle={Proceedings of the Twelfth International AAAI Conference on Web and Social Media (ICWSM 2018)},
+  publisher={IEEE},
+  
+  year={2018}
+}
+@inproceedings{rimjhim2018characterizing,
+ author = {Rimjhim and Chakraborty, Roshni},
+ title = {Characterizing User Reactions Towards Twitter's 280 Character Limit},
+ booktitle = {Proceedings of the 10th Annual Meeting of the Forum for Information Retrieval Evaluation},
+ series = {FIRE'18},
+ year = {2018},
+ isbn = {978-1-4503-6208-5},
+ location = {Gandhinagar, India},
+ pages = {48--51},
+ numpages = {4},
+ url = {http://doi.acm.org/10.1145/3293339.3293349},
+ doi = {10.1145/3293339.3293349},
+ acmid = {3293349},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {Emotion Diversity, Readability, Tweet Character Count, text mining},
+} 
+
+@inproceedings{zhu2012effectiveness,
+ author = {Zhu, Haiyi and Kraut, Robert and Kittur, Aniket},
+ title = {Effectiveness of Shared Leadership in Online Communities},
+ booktitle = {Proceedings of the ACM 2012 Conference on Computer Supported Cooperative Work},
+ series = {CSCW '12},
+ year = {2012},
+ isbn = {978-1-4503-1086-4},
+ location = {Seattle, Washington, USA},
+ pages = {407--416},
+ numpages = {10},
+ url = {http://doi.acm.org.libproxy.berkeley.edu/10.1145/2145204.2145269},
+ doi = {10.1145/2145204.2145269},
+ acmid = {2145269},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {motivation, online communities, shared leadership, wikipedia},
+} 
+
+@article{lampe2014crowdsourcing,
+  title={Crowdsourcing civility: A natural experiment examining the effects of distributed moderation in online forums},
+  author={Lampe, Cliff and Zube, Paul and Lee, Jusil and Park, Chul Hyun and Johnston, Erik},
+  journal={Government Information Quarterly},
+  volume={31},
+  number={2},
+  pages={317--326},
+  year={2014},
+  publisher={Elsevier}
+}
+
+
+@misc{terveen_call_2013,
+	title = {Call for {Participation} {\textbar} {Review} {Form}},
+	url = {https://web.archive.org/web/20141016021806/http://cscw.acm.org/2013/review_form.html},
+	urldate = {2019-03-29},
+	journal = {CSCW 2013},
+	author = {Terveen, Loren and Lampe, Cliff},
+	year = {2013}}
+}
+
+@misc{terveen_process_2013,
+	title = {Call for Participation \textbar About the Process},
+	url = {
+https://web.archive.org/web/20140829060342/https://cscw.acm.org/2013/process.html},
+	urldate = {2019-03-29},
+	journal = {CSCW 2013},
+	author = {Terveen, Loren and Lampe, Cliff},
+	year = {2013}}
+}
+
+@misc{chi_tumblr,
+url = {https://sigchi.tumblr.com/post/100728292020/whats-the-cost-of-not-counting-references-in-page},
+year = {2014},
+title ={What's the cost of not counting references in page length?},
+author = {SIGCHI},
+journal = {SIGCHI Tumblr}
+}
+
+@book{shapin_leviathan_1985,
+	address = {Princeton},
+	title = {Leviathan and the {Air}-Pump},
+	isbn = {0-691-08393-2 978-0-691-08393-3},
+	publisher = {Princeton University Press},
+	author = {Shapin, Steven and Schaffer, Simon},
+	year = {1985}
+}
+
+
+@article{orlikowski2005material,
+  title={Material Works: Exploring the Situated Entanglement of Technological Performativity and Human Agency},
+  author={Orlikowski, Wanda J},
+  journal={Scandinavian Journal of Information Systems},
+  volume={17},
+  number={1},
+  pages={6},
+  year={2005},
+  url={https://aisel.aisnet.org/cgi/viewcontent.cgi?article=1052&context=sjis}
+}
+
+@inproceedings{morgan2010negotiating,
+  title={Negotiating With Angry Mastodons: The Wikipedia Policy Environment As Genre Ecology},
+  author={Morgan, Jonathan T and Zachry, Mark},
+  booktitle={Proceedings of the 16th ACM International Conference on Supporting Group Work (GROUP 2010)},
+  pages={165--168},
+  year={2010},
+  organization={ACM}
+}
+@inproceedings{herring2004bridging,
+  title={Bridging the Gap: A Genre Analysis of Weblogs},
+  author={Herring, Susan C and Scheidt, Lois Ann and Bonus, Sabrina and Wright, Elijah},
+  booktitle={37th Annual Hawaii International Conference on System Sciences, 2004. Proceedings of the},
+  pages={11--pp},
+  year={2004},
+  organization={IEEE}
+}
+
+@article{spinuzzi2000genre,
+  title={Genre Ecologies: An Open-System Approach to Understanding and Constructing Documentation},
+  author={Spinuzzi, Clay and Zachry, Mark},
+  journal={ACM Journal of Computer Documentation (JCD)},
+  volume={24},
+  number={3},
+  pages={169--181},
+  year={2000},
+  publisher={ACM}
+}
+
+@inproceedings{geiger2013levee,
+  title={When the Levee Breaks: Without Bots, What Happens to Wikipedia’s Quality Control Processes?},
+  author={Geiger, R Stuart and Halfaker, Aaron},
+  booktitle={Proceedings of the 9th International Symposium on Open Collaboration (OpenSym 2013)},
+  pages={6},
+  year={2013},
+  doi={10.1145/2491055.2491061},
+  organization={ACM}
+}
+
+@article{crawford2016flag,
+  title={What Is a Flag For? Social Media Reporting Tools and the Vocabulary of Complaint},
+  author={Crawford, Kate and Gillespie, Tarleton},
+  journal={New Media \& Society},
+  volume={18},
+  number={3},
+  pages={410--428},
+  year={2016},
+  publisher={Sage Publications Sage UK: London, England}
+}
+
+@article{correia2019effect,
+author = {Correia, Ant{\'{o}}nio and Jameel, Shoaib and Schneider, Daniel and Fonseca, Benjamim and Paredes, Hugo},
+journal = {Proceedings of the 2019 IEEE 23rd International Conference on Computer Supported Cooperative Work in Design},
+title = {{The Effect of Scientific Collaboration on CSCW Research: A Scientometric Study}},
+url = {https://kar.kent.ac.uk/73120/1/Camera\_Ready\_CSCWD\_Scientific\_Collaboration.pdf},
+year = {2019}
+}
+@article{Wallace2017,
+author = {Wallace, James R. and Oji, Saba and Anslow, Craig},
+doi = {10.1145/3134741},
+issn = {25730142},
+journal = {Proceedings of the ACM on Human-Computer Interaction},
+keywords = {empirical research,systematic review},
+month = {dec},
+number = {CSCW},
+pages = {1--18},
+publisher = {ACM},
+title = {{Technologies, Methods, and Values}},
+url = {http://dl.acm.org/citation.cfm?doid=3171581.3134741},
+volume = {1},
+year = {2017}
+}
+@article{Keegan2013,
+archivePrefix = {arXiv},
+arxivId = {1307.7172},
+author = {Keegan, Brian and Horn, Dan and Finholt, Thomas A. and Kaye, Joseph},
+eprint = {1307.7172},
+title = {{Structure and Dynamics of Coauthorship, Citation, and Impact within CSCW}},
+url = {http://arxiv.org/abs/1307.7172},
+year = {2013}
+}
+@inproceedings{Horn2004,
+address = {New York, New York, USA},
+author = {Horn, Daniel B. and Finholt, Thomas A. and Birnholtz, Jeremy P. and Motwani, Dheeraj and Jayaraman, Swapnaa},
+booktitle = {Proceedings of the 2004 ACM conference on Computer supported cooperative work  - CSCW '04},
+doi = {10.1145/1031607.1031707},
+isbn = {1581138105},
+publisher = {ACM Press},
+title = {{Six Degrees of Jonathan Grudin}},
+url = {http://portal.acm.org/citation.cfm?doid=1031607.1031707},
+year = {2004}
+}
+@inproceedings{Jacovi2006,
+address = {New York, New York, USA},
+author = {Jacovi, Michal and Soroka, Vladimir and Gilboa-Freedman, Gail and Ur, Sigalit and Shahar, Elad and Marmasse, Natalia},
+booktitle = {Proceedings of the 2006 ACM Conference on Computer Supported Cooperative Work (CSCW '06)},
+doi = {10.1145/1180875.1180920},
+isbn = {1595932496},
+pages = {289},
+publisher = {ACM Press},
+title = {{The Chasms of CSCW}},
+url = {http://portal.acm.org/citation.cfm?doid=1180875.1180920},
+year = {2006}
+}
+
+@article{Correia2018,
+author = {Correia, Ant{\'{o}}nio and Paredes, Hugo and Fonseca, Benjamim},
+doi = {10.1007/s11192-017-2562-0},
+file = {::},
+issn = {0138-9130},
+journal = {Scientometrics},
+number = {1},
+pages = {31--89},
+publisher = {Springer Netherlands},
+title = {{Scientometric Analysis of Scientific Publications in CSCW}},
+url = {http://link.springer.com/10.1007/s11192-017-2562-0},
+volume = {114},
+year = {2018}
+}
+@misc{seaborn,
+  author       = {Michael Waskom and
+                  Olga Botvinnik and
+                  Drew O'Kane and
+                  Paul Hobson and
+                  Joel Ostblom and
+                  Saulius Lukauskas and
+                  David C Gemperline and
+                  Tom Augspurger and
+                  Yaroslav Halchenko and
+                  John B. Cole and
+                  Jordi Warmenhoven and
+                  Julian de Ruiter and
+                  Cameron Pye and
+                  Stephan Hoyer and
+                  Jake Vanderplas and
+                  Santi Villalba and
+                  Gero Kunter and
+                  Eric Quintero and
+                  Pete Bachant and
+                  Marcel Martin and
+                  Kyle Meyer and
+                  Alistair Miles and
+                  Yoav Ram and
+                  Thomas Brunner and
+                  Tal Yarkoni and
+                  Mike Lee Williams and
+                  Constantine Evans and
+                  Clark Fitzgerald and
+                  Brian and
+                  Adel Qalieh},
+  title        = {Seaborn: Statistical Data Visualization Using Matplotlib},
+  month        = jul,
+  year         = 2018,
+  doi          = {10.5281/zenodo.592845},
+  url          = {https://seaborn.pydata.org}
+}
+
+@article{matplotlib,
+author = {Hunter, John D. },
+title = {Matplotlib: A 2D Graphics Environment},
+journal = {Computing in Science \& Engineering},
+volume = {9},
+number = {3},
+pages = {90-95},
+year = {2007},
+doi = {10.1109/MCSE.2007.55},
+
+URL = { 
+        https://aip.scitation.org/doi/abs/10.1109/MCSE.2007.55
+},
+eprint = { 
+        https://aip.scitation.org/doi/pdf/10.1109/MCSE.2007.55
+}
+
+}
+
+@inproceedings{pandas,
+author = {McKinney, Wes},
+booktitle = {Proceedings of the 9th Python in Science Conference},
+editor = {van der Walt, St{\'{e}}fan and Millman, Jarrod},
+pages = {51--56},
+title = {{Data Structures for Statistical Computing in Python}},
+year = {2010},
+url = "http://conference.scipy.org/proceedings/scipy2010/mckinney.html"
+}
+
+@misc{python,
+author = {van Rossum, Guido},
+title = {Python Library Reference},
+URL = "https://ir.cwi.nl/pub/5009/05009D.pdf",
+year = {1995},
+journal = {CWI Report CS-R9524}
+}
+
+@misc{pandoc,
+  author       = {John MacFarlane},
+  title        = {Pandoc: A Universal Document Converter},
+  year         = 2019,
+  doi          = {10.5281/zenodo.3243760},
+  url          = {http://pandoc.org},
+  journal = {Zenodo}
+}
+
+@conference{jupyter,
+	Author = {Thomas Kluyver and Benjamin Ragan-Kelley and Fernando P{\'e}rez and Brian Granger and Matthias Bussonnier and Jonathan Frederic and Kyle Kelley and Jessica Hamrick and Jason Grout and Sylvain Corlay and Paul Ivanov and Dami{\'a}n Avila and Safia Abdalla and Carol Willing},
+	Booktitle = {Positioning and Power in Academic Publishing: Players, Agents and Agendas},
+	Editor = {F. Loizides and B. Schmidt},
+	Organization = {IOS Press},
+	address={Amsterdam},
+	Pages = {87 - 90},
+	Title = {Jupyter Notebooks: A Publishing format for Reproducible Computational Workflows},
+	doi={10.3233/978-1-61499-649-1-87},
+	Year = {2016}
+	}
+	
+	
+
+@InProceedings{ binder,
+  author    = { {P}roject {J}upyter and {M}atthias {B}ussonnier and {J}essica {F}orde and {J}eremy {F}reeman and {B}rian {G}ranger and {T}im {H}ead and {C}hris {H}oldgraf and {K}yle {K}elley and {G}ladys {N}alvarte and {A}ndrew {O}sheroff and {M} {P}acer and {Y}uvi {P}anda and {F}ernando {P}erez and {B}enjamin {R}agan-{K}elley and {C}arol {W}illing },
+  title     = { {B}inder 2.0 - {R}eproducible, Interactive, Sharable Environments for Science at Scale },
+  booktitle = { {P}roceedings of the 17th {P}ython in {S}cience {C}onference },
+  pages     = { 113 - 120 },
+  year      = { 2018 },
+  editor    = { {F}atih {A}kici and {D}avid {L}ippa and {D}illon {N}iederhut and {M} {P}acer },
+  doi       = { 10.25080/Majora-4af1f417-011 }
+}
+
+@book{anthony1984constitution,
+  title={The Constitution of Society: Outline of the Theory of Structuration},
+  author={Anthony Giddens},
+  year={1984},
+  publisher={University of California Press},
+  location={Berkeley}
+}
+
+
+@article{orlikowski_genre_1994,
+	title = {Genre {Repertoire}: {The} {Structuring} of {Communicative} {Practices} in {Organizations}},
+	volume = {39},
+	issn = {0001-8392},
+	shorttitle = {Genre {Repertoire}},
+	url = {https://www.jstor.org/stable/2393771},
+	doi = {10.2307/2393771},
+	number = {4},
+	urldate = {2019-08-11},
+	journal = {Administrative Science Quarterly},
+	author = {Orlikowski, Wanda J. and Yates, JoAnne},
+	year = {1994},
+	pages = {541--574}
+}
+
+@book{clark1989innovation,
+  title={Innovation in Technology and Organization.},
+  author={Clark, Peter and Staunton, Neil},
+  year={1989},
+  address={London},
+  publisher={Routledge}
+}
+@article{yates1992,
+  title={Genres of Organizational Communication: A Structurational Approach to Studying Communication and Media},
+  author={Yates, JoAnne and Orlikowski, Wanda J},
+  journal={Academy of Management Review},
+  volume={17},
+  number={2},
+  pages={299--326},
+  year={1992}
+  }
+  
+  @inproceedings{Lampe2006,
+ author = {Lampe, Cliff and Ellison, Nicole and Steinfield, Charles},
+ title = {A Face(Book) in the Crowd: Social Searching vs. Social Browsing},
+ booktitle = {Proceedings of the 2006 20th Anniversary Conference on Computer Supported Cooperative Work},
+ series = {CSCW '06},
+ year = {2006},
+ isbn = {1-59593-249-6},
+ location = {Banff, Alberta, Canada},
+ pages = {167--170},
+ numpages = {4},
+ url = {http://doi.acm.org/10.1145/1180875.1180901},
+ doi = {10.1145/1180875.1180901},
+ acmid = {1180901},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {online communities, online interactions, social networks},
+} 
