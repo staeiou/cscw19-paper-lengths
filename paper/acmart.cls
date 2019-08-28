@@ -1412,7 +1412,7 @@ Computing Machinery]
 \@acmownedtrue
 \define@choicekey*{ACM@}{acmcopyrightmode}[%
   \acm@copyrightinput\acm@copyrightmode]{none,%
-    acmcopyright,acmlicensed,rightsretained,%
+    acmcopyright,acmlicensed,rightsretained,rightsretainedccby,%
     usgov,usgovmixed,cagov,cagovmixed,licensedusgovmixed,%
     licensedcagov,licensedcagovmixed,othergov,licensedothergov,%
     iw3c2w3,iw3c2w3g}{%
@@ -1474,6 +1474,9 @@ Computing Machinery]
   ACM\@.
   \or % rightsretained
   Copyright held by the owner/author(s).
+  \or % rightsretained
+  Copyright held by the owner/author(s). Publication rights licensed to
+  ACM\@.
   \or % usgov
   \or % usgovmixed
   Association for Computing Machinery.
@@ -1535,6 +1538,8 @@ Computing Machinery]
    page. Copyrights for third-party components of this work must be
    honored. For all other uses, contact the
    owner\hspace*{.5pt}/author(s).
+  \or % rightsretainedccby
+   \copyright \space The author 2019. This is an Author Accepted Manuscript of an article published by the ACM. The version of record is available at the DOI below. This version of the article is freely licensed under the Creative Commons Attribution 4.0 International license, available at \url{https://creativecommons.org/licenses/by/4.0/}. You are free to redistribute this article in whole or part, as well as to modify and build on this article, for no fee.
   \or % usgov
    This paper is authored by an employee(s) of the United States
    Government and is in the public domain. Non-exclusive copying or
