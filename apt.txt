@@ -1,2 +1,3 @@
-fonts-humor-sans
 pandoc
+libmagickwand-dev
+fonts-humor-sans
