@@ -111,59 +111,69 @@ years.sort()
 len(merged_df.query("year_float > 2017 & body_len_words > 10578")) / len(merged_df.query("year_float > 2017"))
 
 
-# "Only 26.6% of all PACMHCI papers had a main section length shorterthan the upper 95th percentile length for 2000-2012 non-note papers."
+# "73.4\% of all PACMHCI papers had a main section length longer than the upper 95th percentile length for 2000-2012 non-note papers."
 
 # In[12]:
 
 
-len(merged_df.query("year_float > 2017 & body_len_words < 9509")) / len(merged_df.query("year_float > 2017"))
+len(merged_df.query("year_float > 2017 & body_len_words > 9509")) / len(merged_df.query("year_float > 2017"))
 
 
 # ### Exploratory / not presented in the paper
 
+# Descriptive statistics for non-notes before 2013
+
 # In[13]:
-
-
-(merged_df.query("year_float > 2013 & year_float < 2017.5").words).describe()
-
-
-# In[14]:
-
-
-(merged_df.query("year_float > 2013 & year_float < 2017.5").words).describe()
-
-
-# In[15]:
 
 
 (merged_df.query("year_float < 2013 & num_pages > 4").body_len_words).describe()
 
 
+# Descriptive statistics for notes before 2013
+
+# In[14]:
+
+
+(merged_df.query("year_float < 2013 & num_pages == 4").body_len_words).describe()
+
+
+# Descriptive statistics for all papers after 2012
+
+# In[15]:
+
+
+(merged_df.query("year_float > 2012").body_len_words).describe()
+
+
+# Descriptive statistics for all papers 2013-2017
+
 # In[16]:
 
 
-(merged_df.query("year_float < 2013 & num_pages > 4").body_len_words).quantile(.99)
+(merged_df.query("year_float > 2012 & year_float < 2017.5").body_len_words).describe()
 
 
-# What proportion of PACMHCI CSCW papers are longer than the upper median length paper published before 2013?
+# Descriptive statistics for all papers in PACMHCI (2017.5 and 2018)
 
 # In[17]:
 
 
+(merged_df.query("year_float > 2017").body_len_words).describe()
+
+
+# What proportion of PACMHCI CSCW papers are longer than the upper median length paper published before 2013?
+
+# In[18]:
+
+
 len(merged_df.query("year_float > 2017 & body_len_words > 7753")) / len(merged_df.query("year_float > 2017"))
-
-
-# In[ ]:
-
-
-
 
 
 # ## Visualizations on word lengths
 # 
 # ### Figure 1: Boxplot + stripplot for total number of words (incl. front matter, references, appendices)
 
-# In[23]:
+# In[19]:
 
 
 sns.set(font_scale=1.05, style='whitegrid')
@@ -220,7 +230,7 @@ plt.savefig("../figures/fig1-word-len-all.pdf", bbox_inches='tight', dpi=300)
 
 # ### Figure 2: Boxplot + stripplot for number of words in the main body + front matter (no references or appendices)
 
-# In[24]:
+# In[20]:
 
 
 sns.set(font_scale=1.05, style='whitegrid')
@@ -279,7 +289,7 @@ plt.savefig("../figures/fig2-word-len-body.pdf", bbox_inches='tight', dpi=300)
 # 
 # #### Distributions overall
 
-# In[25]:
+# In[21]:
 
 
 merged_df.body_len_words.hist(bins=50,figsize=[10,4])
@@ -287,13 +297,13 @@ merged_df.body_len_words.hist(bins=50,figsize=[10,4])
 
 # #### Distributions in the official notes era
 
-# In[26]:
+# In[22]:
 
 
 merged_df.query("2004 < year_float < 2013").body_len_words.hist(bins=50,figsize=[10,4])
 
 
-# In[27]:
+# In[23]:
 
 
 merged_df.query("num_pages == 4").body_len_words.describe()
@@ -301,7 +311,7 @@ merged_df.query("num_pages == 4").body_len_words.describe()
 
 # ### Defining length functions
 
-# In[28]:
+# In[24]:
 
 
 def is_note(row):
@@ -312,7 +322,7 @@ def is_note(row):
         return False
 
 
-# In[29]:
+# In[25]:
 
 
 def paper_type(row):
@@ -331,7 +341,7 @@ def paper_type(row):
         return 'long read'
 
 
-# In[30]:
+# In[26]:
 
 
 def paper_type_alt(row):
@@ -350,7 +360,7 @@ def paper_type_alt(row):
         return 'mega article'
 
 
-# In[31]:
+# In[27]:
 
 
 merged_df['is_note'] = merged_df.apply(is_note, axis=1)
@@ -368,27 +378,29 @@ merged_df['paper_type_alt'] = merged_df.apply(paper_type_alt, axis=1)
 # 
 # In the paper, I ended up using the `paper_type_alt` function
 
-# In[32]:
+# In[28]:
 
 
 merged_df.paper_type_alt.value_counts()
 
 
-# In[33]:
+# In[29]:
 
 
 df_types_count = merged_df.groupby('year').             paper_type_alt.value_counts(normalize=False, sort=True).unstack()
 df_types_count
 
 
-# In[34]:
+# "From 2004 to 2012, there was a consistent cluster of notes and longer papers, with the proportion of notes ranging from 21\% (2011) to 38\% (2010)."
+
+# In[30]:
 
 
 df_types = merged_df.groupby('year').             paper_type_alt.value_counts(normalize=True, sort=True).unstack()
 df_types
 
 
-# In[35]:
+# In[31]:
 
 
 df_types = df_types[['note', 'short paper', 'full paper', 'journal article', 'mega article']]
@@ -396,7 +408,7 @@ df_types = df_types[['note', 'short paper', 'full paper', 'journal article', 'me
 
 # ### Figure 3: Distribution of somewhat arbitrary categories of main body length
 
-# In[37]:
+# In[32]:
 
 
 sns.set(font_scale=1.2, style="whitegrid")
@@ -435,13 +447,13 @@ plt.savefig("../figures/fig3-dist-len-cat.pdf", bbox_inches='tight', dpi=300)
 
 # ## Interactive/web visualizations
 
-# In[38]:
+# In[33]:
 
 
 merged_df['filename'] = merged_df.index
 
 
-# In[39]:
+# In[34]:
 
 
 fig = px.box(merged_df,y='body_len_words',
@@ -454,13 +466,13 @@ fig.show()
 
 
 
-# In[40]:
+# In[35]:
 
 
 po.plot(fig, filename="../figures/len_by_year.html")
 
 
-# In[41]:
+# In[36]:
 
 
 fig = go.Figure(data=[go.Table(
@@ -476,14 +488,16 @@ fig.show()
 po.plot(fig, filename="../figures/web_table.html")
 
 
-# In[45]:
+# ### Proportion of papers that have quotes in the title
+
+# In[37]:
 
 
 df_quote_title = merged_df.groupby('year')['title_has_quote'].value_counts(normalize=False, sort=True).unstack()
 df_quote_title
 
 
-# In[71]:
+# In[38]:
 
 
 ax = df_quote_title.plot(kind='bar', stacked=True, figsize=[13,4], width=.85, color=pal)
@@ -515,11 +529,7 @@ plt.axvline(1.5, ymin=-.2, zorder=100, clip_on=False, color='k', alpha=.5)
 plt.axvline(7.5, ymin=-.2, zorder=100, clip_on=False, color='k', alpha=.5)
 plt.axvline(12.52, ymin=-.2, zorder=100, clip_on=False, color='k', alpha=.5)
 
-
-# In[ ]:
-
-
-
+plt.savefig("../figures/quotes-in-titles.pdf", bbox_inches='tight', dpi=300)
 
 
 # In[ ]:
